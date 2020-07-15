@@ -11,6 +11,7 @@ init.appendChild(textnode); // met le text en child de <p>
 init.setAttribute('class', "bot");
 targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
 let counterQuestion = 0;
+let retry = 0;
 
 function getRandomInt(max) { // fonction génère un entier aléatoire
     return Math.floor(Math.random() * Math.floor(max));
@@ -23,7 +24,7 @@ function test(reponse) { // test de la réponse si oui ou non ou autre
     } else if (reponse === "no") {
         counterQuestion += 3;
     } else {
-
+        other(reponse);
     }
 }
 
@@ -75,12 +76,12 @@ function finish(reponse) { //réponse à 1ère question
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
 
     } else {
-
+        other(response);
     }
 }
 
 function crime(reponse) { //2e question si non
-    counterQuestion+=2;
+    counterQuestion += 2;
     let randomNum = getRandomInt(3);
     let quest = ["Have you commited a crime ?", "Are you a criminal ?",
         "Are you on the wrong side of justice ?"
@@ -93,6 +94,7 @@ function crime(reponse) { //2e question si non
     targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
 
 }
+
 function finish2(reponse) { //réponse 2e question
     if (reponse === "yes") {
 
@@ -127,8 +129,29 @@ function finish2(reponse) { //réponse 2e question
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
 
     } else {
-
+        other(retry);
     }
+}
+
+function other(retry) { //to do ***** switch
+
+    if (retry=3){
+        let init = document.createElement("p"); //création de l'élément <p>
+        let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
+        let textnode = document.createTextNode(astroBot + "Are you able to comprehend human speech ? I don't have time for you, see you."); // crée le string Vous : + input de l'user
+        init.appendChild(textnode); // met le text en child de <p>
+        init.setAttribute('class', "bot");
+        targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+    }
+    else{
+    let init = document.createElement("p"); //création de l'élément <p>
+    let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
+    let textnode = document.createTextNode(astroBot + "That's not a yes or no, please retry."); // crée le string Vous : + input de l'user
+    init.appendChild(textnode); // met le text en child de <p>
+    init.setAttribute('class', "bot");
+    targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+}
+
 }
 
 document.getElementById("send").addEventListener("click", () => {
@@ -142,6 +165,7 @@ document.getElementById("send").addEventListener("click", () => {
 
     test(reponse);
     console.log(counterQuestion);
+    console.log(retry);
 
     switch (counterQuestion) {
         case 1:
@@ -162,9 +186,9 @@ document.getElementById("send").addEventListener("click", () => {
         case 8:
             finish2(reponse);
             break;
-        default :
+        default:
+
             break;
     }
-
 
 });
