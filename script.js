@@ -24,7 +24,8 @@ function test(reponse) { // test de la réponse si oui ou non ou autre
     } else if (reponse === "no") {
         counterQuestion += 3;
     } else {
-        other(reponse);
+        other(retry);
+        retry++;
     }
 }
 
@@ -133,24 +134,22 @@ function finish2(reponse) { //réponse 2e question
     }
 }
 
-function other(retry) { //to do ***** switch
-
-    if (retry=3){
+function other(retry) { //fonction si reponse autre que oui ou non
+    if (retry == 3) {
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
         let textnode = document.createTextNode(astroBot + "Are you able to comprehend human speech ? I don't have time for you, see you."); // crée le string Vous : + input de l'user
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+    } else {
+        let init = document.createElement("p"); //création de l'élément <p>
+        let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
+        let textnode = document.createTextNode(astroBot + "That's not a yes or no, please retry."); // crée le string Vous : + input de l'user
+        init.appendChild(textnode); // met le text en child de <p>
+        init.setAttribute('class', "bot");
+        targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
     }
-    else{
-    let init = document.createElement("p"); //création de l'élément <p>
-    let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
-    let textnode = document.createTextNode(astroBot + "That's not a yes or no, please retry."); // crée le string Vous : + input de l'user
-    init.appendChild(textnode); // met le text en child de <p>
-    init.setAttribute('class', "bot");
-    targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
-}
 
 }
 
