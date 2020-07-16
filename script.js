@@ -26,19 +26,18 @@ function botPense() { //fait penser le bot pendant 2s et met un message provisoi
     wait.appendChild(textnode); // met le text en child de <p>
     wait.setAttribute('class', "bot");
     targetWait.appendChild(wait); //met le <p> en child dans la div ChatBox
-    console.log("a ecrit");
 
     setTimeout(function () {
         targetWait.removeChild(targetWait.lastChild);
         document.getElementById("inputBox").disabled = false; //réactive la input box
         document.getElementById("send").disabled = false; //réactive le bouton send
-    }, 1500); //délai 2s
+    }, 1500); //délai 1.5s
 
 }
 
 function test(reponse) { // test de la réponse si oui ou non ou autre
 
-    if ((reponse.toLowerCase().includes("yes")) && (reponse.toLowerCase().includes("no"))){
+   if ((reponse.toLowerCase().includes("yes")) && (reponse.toLowerCase().includes("no"))){
         other(retry);
         retry++;
     }   
@@ -69,7 +68,7 @@ function annif(reponse) { //1ère question si oui
 }
 
 function finish(reponse) { //réponse à 1ère question
-    if (reponse === "yes") {
+    if (reponse.toLowerCase().includes("yes")) {
 
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
@@ -87,7 +86,7 @@ function finish(reponse) { //réponse à 1ère question
         document.getElementById("inputBox").disabled = true; //désactive la input box
         document.getElementById("send").disabled = true; //désactive le bouton send
 
-    } else if (reponse === "no") {
+    } else if (reponse.toLowerCase().includes("no")) {
 
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
@@ -126,7 +125,7 @@ function crime(reponse) { //2e question si non
 }
 
 function finish2(reponse) { //réponse 2e question
-    if (reponse === "yes") {
+    if (reponse.toLowerCase().includes("yes")) {
 
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
@@ -144,7 +143,7 @@ function finish2(reponse) { //réponse 2e question
         document.getElementById("inputBox").disabled = true; //désactive la input box
         document.getElementById("send").disabled = true; //désactive le bouton send
 
-    } else if (reponse === "no") {
+    } else if (reponse.toLowerCase().includes("no")) {
 
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
@@ -230,7 +229,7 @@ document.getElementById("send").addEventListener("click", () => { //event si cli
 
                 break;
         }
-    }, 1500); //délai 2s
+    }, 1500); //délai 1.5s
 
 
 });
@@ -279,6 +278,6 @@ document.getElementById("inputBox").addEventListener("keydown", ({
 
                     break;
             }
-        }, 1500); //délai 2s
+        }, 1500); //délai 1.5s
     }
 });
