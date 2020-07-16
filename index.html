@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Excercice Chatbot">
     <meta name="keywords" content="HTML, CSS, JS, json">
-    <meta name="author" content="Sébastien Meunier,Masato Deweerdt,El kabir Soufiane">
-    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Sébastien Meunier,Masato Deweerdt,Soufiane El kabir ">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
     <title>chatbot</title>
 </head>
-
 <body>
-    <header>
-        <h1>#Nom du bot</h1>
-    </header>
-    <section>
-        <!--section du chat-->
-        <div class="container">
-            <div class="chatbox"></div>
-            <div class="input">
-                <input type="text" id="inputBox">
+    
+    <div class="flex-wrapper">
+        <header>
+            <img src="asset/logo/astro.png" alt="astro logo" class="logo">
+            <div class="headerTitle">
+                <h1 class="title">Astro bot</h1>
             </div>
-        </div>
-    </section>
-    <footer>
-        <!--Liens vers repo chatbot et mainpage des codeurs-->
-    </footer>
+        </header>
+        <section>
+            <!--section du chat-->
+            <div class="container">
+                <div class="chatBox"></div>
+                <div class="input">
+                    <input type="text" id="inputBox">
+                    <button class="#" id="send">Send</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <!--Liens vers repo chatbot et mainpage des codeurs-->
+        </footer>
+    </div>
+    
     <script src="script.js"></script>
 </body>
-
 </html>
