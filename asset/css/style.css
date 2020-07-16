@@ -71,9 +71,6 @@ section {
     margin-left: auto;
 }
 
-.user:nth-child(3n) {
-   
-}
 
 .container {
     width: 60vw;
@@ -88,7 +85,6 @@ section {
     width: 100%;
     height: 85%;
     margin: auto;
-    /* border: 1px solid black; */
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -125,6 +121,7 @@ button {
                 transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
+    width: 30%;
 }
 
 .button {
@@ -166,11 +163,7 @@ ul{
     font-family: 'Deco';
     src: url(../font/Market_Deco.ttf);
 }
-<<<<<<< HEAD
-
 @font-face {
-    font-family: 'Helvetica neue';
+    font-family: 'Helvetica';
     src: url(../font/Helvetica45Light_22437.ttf);
 }
-=======
->>>>>>> c9b190d1d47e9c47051cadfd983faec1dde2b5e6
