@@ -17,7 +17,7 @@ function getRandomInt(max) { // fonction génère un entier aléatoire
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function botPense() { //fait penser le bot pendant 1s et met un message provisoire dans le chat + désactive les inputs durant ce temps
+function botPense() { //fait penser le bot pendant 2s et met un message provisoire dans le chat + désactive les inputs durant ce temps
 
     console.log ("botpense");
 
@@ -32,17 +32,19 @@ function botPense() { //fait penser le bot pendant 1s et met un message provisoi
     targetWait.appendChild(wait); //met le <p> en child dans la div ChatBox
     console.log ("a ecrit");
 
-    setTimeout(remove (targetWait) //définit une seconde de délai
-    , 5000);    
+    setTimeout(function () {
+        console.log ("waiting done");
+    }, 2000);    //délai 2s
+    targetWait.removeChild(targetWait.lastChild);
 
     console.log ("a remove");
 
     document.getElementById("inputBox").disabled = false; //réactive la input box
     document.getElementById("send").disabled = false; //réactive le bouton send
 }
-function remove (targetWait){
+/*function remove (targetWait){
     targetWait.removeChild(targetWait.lastChild);
-}
+}*/
 function test(reponse) { // test de la réponse si oui ou non ou autre
 
     if (reponse === "yes") {
