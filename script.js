@@ -59,6 +59,8 @@ function finish(reponse) { //réponse à 1ère question
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+        document.getElementById("inputBox").disabled = true; //désactive la input box
+        document.getElementById("send").disabled = true; //désactive le bouton send
 
     } else if (reponse === "no") {
 
@@ -75,6 +77,8 @@ function finish(reponse) { //réponse à 1ère question
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+        document.getElementById("inputBox").disabled = true; //désactive la input box
+        document.getElementById("send").disabled = true; //désactive le bouton send
 
     } else {
         other(response);
@@ -112,6 +116,8 @@ function finish2(reponse) { //réponse 2e question
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+        document.getElementById("inputBox").disabled = true; //désactive la input box
+        document.getElementById("send").disabled = true; //désactive le bouton send
 
     } else if (reponse === "no") {
 
@@ -128,6 +134,8 @@ function finish2(reponse) { //réponse 2e question
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+        document.getElementById("inputBox").disabled = true; //désactive la input box
+        document.getElementById("send").disabled = true; //désactive le bouton send
 
     } else {
         other(retry);
@@ -142,6 +150,8 @@ function other(retry) { //fonction si reponse autre que oui ou non
         init.appendChild(textnode); // met le text en child de <p>
         init.setAttribute('class', "bot");
         targetInit.appendChild(init); //met le <p> en child dans la div ChatBox
+        document.getElementById("inputBox").disabled = true; //désactive la input box
+        document.getElementById("send").disabled = true; //désactive le bouton send
     } else {
         let init = document.createElement("p"); //création de l'élément <p>
         let targetInit = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
