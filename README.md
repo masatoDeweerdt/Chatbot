@@ -2,15 +2,14 @@
 
 ## Introduction
 
-Dans ce repository vous trouverez un chatbot basique codé en équipe de trois sur 3 jours.  
+Dans ce repository vous trouverez un chatbot basique codé en équipe de trois sur 2 jours.  
 Il s'agit d'un challenge réalisé lors de la formation chez BeCode.
 
 ## Langages utilisés
 
 + HTML5
 + CSS3  
-+ JS
-+ JSON
++ JS ES6
 
 ## Responsive
 
@@ -24,7 +23,7 @@ implémenté via MediaQueries
 
 ## Liens vers la page  
 
-[Içi](https://soufianecode.github.io/Chatbot/)  
+[Ici](https://soufianecode.github.io/Chatbot/)  
 
 ## Progression
 
@@ -36,6 +35,7 @@ v1.0 : 16/07/2020
 
 + 15/07/2020 10h30 : création du readme, initialisation du repo et des fichiers basiques.
 + 16/07/2020 9h15 : html css et js fini pour version de test basique.
++ 16/07/2020 15h00 : v1.0
 
 
 ## Poste occupé durant la Réalisation
@@ -51,7 +51,9 @@ v1.0 : 16/07/2020
 ![Screenshot1](asset/screenshot/html-seul.JPG)
 ![Screenshot2](asset/screenshot/ajout-css.JPG)
 ![Screenshot3](asset/screenshot/Ajout-base-de-Js.JPG)
+![Screenshot4](asset/screenshot/Version-1.JPG)
 
 ## Credits
 
 Osamu Tezuka for Astro Boy
+Font awesome
