@@ -38,10 +38,10 @@ function botPense() { //fait penser le bot pendant 2s et met un message provisoi
 
 function test(reponse) { // test de la réponse si oui ou non ou autre
 
-    if (reponse === "yes") {
+    if (reponse.toLowerCase().includes("yes ") || reponse.toLowerCase().includes("yes.") || reponse.toLowerCase().includes("yes,")) {
         counterQuestion++;
         botPense();
-    } else if (reponse === "no") {
+    } else if (reponse.toLowerCase().includes("no")) {
         counterQuestion += 3;
         botPense();
     } else {
@@ -277,4 +277,4 @@ document.getElementById("inputBox").addEventListener("keydown", ({
             }
         }, 2000); //délai 2s
     }
-})
+});
