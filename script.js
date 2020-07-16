@@ -32,7 +32,7 @@ function botPense() { //fait penser le bot pendant 2s et met un message provisoi
         targetWait.removeChild(targetWait.lastChild);
         document.getElementById("inputBox").disabled = false; //réactive la input box
         document.getElementById("send").disabled = false; //réactive le bouton send
-    }, 2000); //délai 2s
+    }, 1500); //délai 2s
 
 }
 
@@ -226,7 +226,7 @@ document.getElementById("send").addEventListener("click", () => { //event si cli
 
                 break;
         }
-    }, 2000); //délai 2s
+    }, 1500); //délai 2s
 
 
 });
@@ -275,6 +275,6 @@ document.getElementById("inputBox").addEventListener("keydown", ({
 
                     break;
             }
-        }, 2000); //délai 2s
+        }, 1500); //délai 2s
     }
 });
