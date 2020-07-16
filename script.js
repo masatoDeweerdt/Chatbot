@@ -17,6 +17,32 @@ function getRandomInt(max) { // fonction génère un entier aléatoire
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+function botPense() { //fait penser le bot pendant 1s et met un message provisoire dans le chat + désactive les inputs durant ce temps
+
+    console.log ("botpense");
+
+    document.getElementById("inputBox").disabled = true; //désactive la input box
+    document.getElementById("send").disabled = true; //désactive le bouton send
+
+    let wait = document.createElement("p"); //création de l'élément <p>
+    let targetWait = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
+    let textnode = document.createTextNode(astroBot + "Astro Bot is thinking . . . "); // crée le string Vous : + input de l'user
+    wait.appendChild(textnode); // met le text en child de <p>
+    wait.setAttribute('class', "bot");
+    targetWait.appendChild(wait); //met le <p> en child dans la div ChatBox
+    console.log ("a ecrit");
+
+    setTimeout(remove (targetWait) //définit une seconde de délai
+    , 5000);    
+
+    console.log ("a remove");
+
+    document.getElementById("inputBox").disabled = false; //réactive la input box
+    document.getElementById("send").disabled = false; //réactive le bouton send
+}
+function remove (targetWait){
+    targetWait.removeChild(targetWait.lastChild);
+}
 function test(reponse) { // test de la réponse si oui ou non ou autre
 
     if (reponse === "yes") {
@@ -163,7 +189,7 @@ function other(retry) { //fonction si reponse autre que oui ou non
 
 }
 
-document.getElementById("send").addEventListener("click", () => {
+document.getElementById("send").addEventListener("click", () => { //event si click sur send
     let node = document.createElement("p"); //création de l'élément <p>
     let target = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
     let reponse = document.getElementById("inputBox").value;
@@ -172,6 +198,7 @@ document.getElementById("send").addEventListener("click", () => {
     node.setAttribute('class', "user");
     target.appendChild(node); //met le <p> en child dans la div ChatBox
 
+    botPense();
     test(reponse);
     console.log(counterQuestion);
     console.log(retry);
@@ -201,3 +228,47 @@ document.getElementById("send").addEventListener("click", () => {
     }
 
 });
+document.getElementById("inputBox").addEventListener("keydown", ({
+    key
+}) => { //event si enter pressé
+    if (key === "Enter") {
+        event.preventDefault();
+        // Do more work
+        let node = document.createElement("p"); //création de l'élément <p>
+        let target = document.getElementsByClassName("chatBox")[0]; //défini la cible chatBox
+        let reponse = document.getElementById("inputBox").value;
+        let textnode = document.createTextNode(user + reponse); // crée le string Vous : + input de l'user
+        node.appendChild(textnode); // met le text en child de <p>
+        node.setAttribute('class', "user");
+        target.appendChild(node); //met le <p> en child dans la div ChatBox
+
+        botPense();
+        test(reponse);
+        console.log(counterQuestion);
+        console.log(retry);
+
+        switch (counterQuestion) {
+            case 1:
+                annif(reponse);
+                break;
+            case 2:
+                finish(reponse);
+                break;
+            case 3:
+                crime(reponse);
+                break;
+            case 4:
+                finish(reponse);
+                break;
+            case 6:
+                finish2(reponse);
+                break;
+            case 8:
+                finish2(reponse);
+                break;
+            default:
+
+                break;
+        }
+    }
+})
