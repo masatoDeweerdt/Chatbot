@@ -46,8 +46,7 @@ footer {
 }
 
 section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    background-color: #ebeefb;
 }
 
 .bot {
@@ -134,18 +133,25 @@ button {
     padding-right: 80px;
 }
 
-footer {
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+.divrepo {
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Deco';
+    font-size: 28px;
 }
 
 .divfooter {
     display: flex;
     justify-content: center;
-    padding: 5px;
-    background-color: #45a1ff;
+    padding-top: 7px;
+    background-color: #000000;
     color: #fff;
+    height: 28px;
+}
+
+.icon {
+    padding-top: 7px;
+    font-size: 40px;
 }
 
 a{
