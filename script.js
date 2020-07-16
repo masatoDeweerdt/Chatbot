@@ -38,7 +38,7 @@ function botPense() { //fait penser le bot pendant 2s et met un message provisoi
 
 function test(reponse) { // test de la réponse si oui ou non ou autre
 
-    if (reponse.toLowerCase().includes("yes ") || reponse.toLowerCase().includes("yes.") || reponse.toLowerCase().includes("yes,")) {
+    if (reponse.toLowerCase().includes("yes")) {
         counterQuestion++;
         botPense();
     } else if (reponse.toLowerCase().includes("no")) {
