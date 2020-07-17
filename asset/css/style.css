@@ -38,6 +38,14 @@ header {
     /* justify-content: center; */
     justify-content: space-around;
     width: 80%;
+    /* text-shadow: 3px 3px 2px rgba(254, 255, 255, 0.77); */
+    text-shadow: 3px 3px 2px rgba(93, 95, 95, 0.77);
+}
+
+.title {
+    font-family: 'Deco', sans-serif;
+    font-size: 2.75em;
+    padding-right: 80px;
 }
 
 footer {
@@ -59,6 +67,10 @@ section {
     background-color: #f7b153;
     margin: 1rem 0;
     margin-right: auto;
+
+    -webkit-box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
+    -moz-box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
+    box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
 }
 .user {
     /* float: right; */
@@ -69,6 +81,10 @@ section {
     background-color: #1eb19d;
     margin: 1rem 0;
     margin-left: auto;
+
+    -webkit-box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
+    -moz-box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
+    box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
 }
 
 
@@ -114,7 +130,7 @@ button {
     background: #214941;
     color: #ffffff;
     font-family: sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.1em;
     cursor: pointer;
     text-align: center;
     transition: background 250ms ease-in-out, 
@@ -124,21 +140,12 @@ button {
     width: 30%;
 }
 
-.button {
-    font: 'Helvetica neue';
-}
-
-.title {
-    font-family: 'Deco', sans-serif;
-    font-size: 44px;
-    padding-right: 80px;
-}
-
 .divrepo {
     padding-top: 20px;
     text-align: center;
     font-family: 'Deco';
-    font-size: 28px;
+    font-size: 1.75em;
+    text-shadow: 3px 3px 2px rgba(93, 95, 95, 0.77);
 }
 
 .divfooter {
@@ -155,13 +162,14 @@ button {
     font-size: 40px;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-ul{
+ul {
     list-style: none;
+    padding: 0;
 }
 
 
