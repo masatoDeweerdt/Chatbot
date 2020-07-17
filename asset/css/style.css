@@ -27,7 +27,7 @@ header {
     flex-direction: row;
     width: 100vw;
     height: 15vh;
-    background-color: #35ac9c;
+    background-color: #1eb19d;
     text-align: center;
 }
 
@@ -149,6 +149,7 @@ button {
 }
 
 .divfooter {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     padding-top: 7px;
