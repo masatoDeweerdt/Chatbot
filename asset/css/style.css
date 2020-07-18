@@ -7,6 +7,7 @@ body {
 }
 
 .flex-wrapper {
+    
     display: flex;
     min-height: 100vh;
     flex-direction: column ;
@@ -73,6 +74,7 @@ section {
     -moz-box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
     box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
 }
+
 .user {
     /* float: right; */
     display: inline-block;
@@ -88,15 +90,15 @@ section {
     box-shadow: inset 0px 0px 11px -1px rgba(0,0,0,0.63);
 }
 
-
 .container {
     width: 60vw;
-    height: 500px;
+    height: 70vh;
     border-bottom: 0;
     align-items: center;
     border-radius: 10px;
     margin: auto;
 }
+
 .chatBox {
     font-family: 'Roboto', sans-serif;
     width: 100%;
@@ -174,8 +176,6 @@ ul {
     padding: 0;
 }
 
-
-
 @font-face {
     font-family: 'Deco';
     src: url(../font/Market_Deco.ttf);
@@ -183,4 +183,144 @@ ul {
 @font-face {
     font-family: 'Helvetica';
     src: url(../font/Helvetica45Light_22437.ttf);
+}
+
+@media screen and (min-width: 320px) and (max-width: 372px) {
+    
+    .logo {
+        height: 90px;
+        padding-left: 5px;
+    }
+
+    .title {
+        font-size: 1.6em;
+        padding-right: 40px;
+    }
+
+    button {
+        font-size: 1.2;
+    }
+
+    .divrepo {
+        font-size: 1.2em;
+    }
+
+    .icon {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    
+    .logo {
+        height: 90px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    .divrepo {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 375px) {
+
+    .logo {
+        height: 100px;
+    }
+
+    .title {
+        font-size: 2em;
+        padding-right: 70px;
+    }
+
+}
+
+@media screen and (min-width: 411px) {
+    .logo {
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    .logo {
+        height: 100px;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    .logo {
+        height: 110px;
+    }
+
+    .title {
+        font-size: 2.4em;
+        padding-right: 130px;
+    }
+
+    .bot {
+        font-size: 1.2em;
+    }
+
+    .user {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 1.2em;
+    }
+
+    .divrepo {
+        font-size: 1.6em;
+    }
+
+    .icon {
+        font-size: 1.6em;
+    }
+
+    .divfooter {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .logo {
+        height: 200px;
+    }
+
+    .title {
+        font-size: 5em;
+        padding-right: 200px;
+    }
+
+    .bot {
+        font-size: 1.8em;
+    }
+
+    .user {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 2em;
+    }
+
+    .divrepo {
+        font-size: 3em;
+    }
+
+    .icon {
+        font-size: 1.6em;
+    }
+
+    .divfooter {
+        font-size: 1.2em;
+    }
+
 }
